@@ -1,4 +1,4 @@
-import './Providers.css'
+import './Orders.css';
 
 const Search = () => {
   return (
@@ -32,7 +32,7 @@ const Search = () => {
       </div>
       <div className='button'>Search</div>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

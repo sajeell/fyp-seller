@@ -1,9 +1,9 @@
-import './Users.css'
+import './Listings.css'
 
-const ViewUser = () => {
+const ViewListing = () => {
   return (
     <div className='view-parent-wrapper'>
-      <h1>View User</h1>
+      <h1>View Listings</h1>
       <span>Name:</span> &nbsp;<strong>David Gustavo</strong>
       <br />
       <br />
@@ -24,4 +24,4 @@ const ViewUser = () => {
   )
 }
 
-export default ViewUser
+export default ViewListing

@@ -1,4 +1,4 @@
-import './Listings.css'
+import './Products.css';
 
 const Search = () => {
   return (
@@ -11,7 +11,7 @@ const Search = () => {
       </div>
       <div className='input'>
         <select>
-          <option value='' disabled >
+          <option value='' disabled>
             City
           </option>
           <option value=''>New York</option>
@@ -22,7 +22,7 @@ const Search = () => {
       </div>
       <div className='input'>
         <select>
-          <option value='' disabled >
+          <option value='' disabled>
             Bus
           </option>
           <option value=''>Volvo</option>
@@ -30,11 +30,9 @@ const Search = () => {
           <option value=''>Nissan</option>
         </select>
       </div>
-      <div className="button">
-          Search
-      </div>
+      <div className='button'>Search</div>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

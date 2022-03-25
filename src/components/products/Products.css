@@ -12,7 +12,7 @@
   --green-font-color: #009600;
 }
 
-.listings-wrapper {
+.products-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -25,7 +25,7 @@
 
 /* Heading */
 
-.listings-heading {
+.products-heading {
   padding-left: 20px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -40,30 +40,32 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
-  margin-bottom: 25px;
 }
 
-.input:first-child {
+.search-input:first-child {
   margin-left: 0 !important;
 }
 
-.input {
+.search-input {
   margin-left: 30px;
 }
 
-.input input,
+.search-input input,
 select {
   margin-top: 20px;
   padding: 10px;
   width: 200px;
+  border: 1px solid #707070;
+  min-height: 50px;
+  outline: none;
 }
 
-.input input:focus,
+.search-input input:focus,
 select:focus {
   outline: none;
 }
 
-.search-wrapper .button {
+.action-button {
   width: 200px;
   background-color: var(--font-color);
   color: white;
@@ -78,11 +80,11 @@ select:focus {
   cursor: pointer;
 }
 
-.search-wrapper .button:hover {
+.action-button:hover {
   background-color: var(--button-hover-color);
 }
 
-.search-wrapper .button:active {
+.action-button:active {
   background-color: var(--button-hover-color);
   transform: translateY(2px);
 }
@@ -109,23 +111,25 @@ select:focus {
   border-radius: 20px;
 }
 
-.view-table-wrapper .table {
+.view-table-wrapper .view-table {
   text-align: center;
   margin-top: 10px;
   width: 100%;
   overflow-x: auto;
-  max-width: 100%;
 }
 
 table {
+  min-width: 75.5vw !important;
+  max-width: 75.5vw !important;
+  overflow-x: scroll;
   border-spacing: 0 !important;
 }
 
-.view-table-wrapper .table thead {
+.view-table-wrapper .view-table thead {
   background-color: var(--thead-background-color);
 }
 
-.view-table-wrapper .table thead th {
+.view-table-wrapper .view-table thead th {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 40px;
@@ -134,7 +138,7 @@ table {
   outline: none;
 }
 
-.view-table-wrapper .table tbody td {
+.view-table-wrapper .view-table tbody td {
   padding: 5px;
 }
 
@@ -174,4 +178,8 @@ table {
 
 #inactive-status {
   color: var(--delete-button-color);
+}
+
+.table > :not(:first-child) {
+  border: none !important;
 }
