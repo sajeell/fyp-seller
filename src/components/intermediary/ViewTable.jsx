@@ -1,5 +1,5 @@
-import { Button, Row } from 'react-bootstrap';
-import './Intermediary.css';
+import { Button, Row } from 'react-bootstrap'
+import './Intermediary.css'
 
 const ViewTable = () => {
   return (
@@ -67,7 +67,7 @@ const ViewTable = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ViewTable;
+export default ViewTable

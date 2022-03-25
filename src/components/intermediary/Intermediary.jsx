@@ -1,6 +1,6 @@
-import './Intermediary.css';
+import './Intermediary.css'
 
-import ViewTable from './ViewTable';
+import ViewTable from './ViewTable'
 
 const Intermediary = () => {
   return (
@@ -13,7 +13,7 @@ const Intermediary = () => {
         <ViewTable />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Intermediary;
+export default Intermediary

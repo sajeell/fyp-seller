@@ -1,6 +1,6 @@
-import './Products.css';
+import './Products.css'
 
-import ViewTable from './ViewTable';
+import ViewTable from './ViewTable'
 
 const Products = () => {
   return (
@@ -13,7 +13,7 @@ const Products = () => {
         <ViewTable />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products

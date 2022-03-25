@@ -1,22 +1,22 @@
-import { logout } from '../../../redux/user/user.action';
-import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { logout } from '../../../redux/user/user.action'
+import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import './Drawer.css';
+import './Drawer.css'
 
 const Drawer = (props) => {
-  let dispatch = useDispatch();
-  let navigate = useNavigate();
+  let dispatch = useDispatch()
+  let navigate = useNavigate()
 
-  const token = useSelector((state) => state.user.token);
+  const token = useSelector((state) => state.user.token)
 
   useEffect(() => {
     if (token === null) {
-      return navigate('/');
+      return navigate('/')
     }
-  }, [token]);
+  }, [token])
   return (
     <div className='drawer-wrapper'>
       <div className='drawer-title-row'>
@@ -75,7 +75,7 @@ const Drawer = (props) => {
         <div
           className='drawer-button'
           onClick={() => {
-            dispatch(logout());
+            dispatch(logout())
           }}
         >
           <div className='drawer-button-text'>
@@ -84,7 +84,7 @@ const Drawer = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Drawer;
+export default Drawer

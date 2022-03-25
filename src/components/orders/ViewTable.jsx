@@ -1,5 +1,5 @@
-import { Button, Row } from 'react-bootstrap';
-import './Orders.css';
+import { Button, Row } from 'react-bootstrap'
+import './Orders.css'
 
 const ViewTable = () => {
   return (
@@ -67,7 +67,7 @@ const ViewTable = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ViewTable;
+export default ViewTable

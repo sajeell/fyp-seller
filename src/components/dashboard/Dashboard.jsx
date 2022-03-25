@@ -1,6 +1,6 @@
-import AreaChart from './area-chart/AreaChart';
-import './Dashboard.css';
-import DriverChart from './driver-chart/DriverChart';
+import AreaChart from './area-chart/AreaChart'
+import './Dashboard.css'
+import DriverChart from './driver-chart/DriverChart'
 
 const Dashboard = () => {
   return (
@@ -50,7 +50,7 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Dashboard;
+export default Dashboard

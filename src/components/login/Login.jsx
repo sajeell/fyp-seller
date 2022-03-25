@@ -1,49 +1,49 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { sellerLogin } from '../../redux/user/user.action';
+import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { sellerLogin } from '../../redux/user/user.action'
 
-import './Login.css';
-import 'react-toastify/dist/ReactToastify.css';
+import './Login.css'
+import 'react-toastify/dist/ReactToastify.css'
 
-import illustration from './img/car-illustration.png';
-import background from './img/illustration-bg.png';
+import illustration from './img/car-illustration.png'
+import background from './img/illustration-bg.png'
 
-import { Container } from 'react-bootstrap';
-import { ToastContainer } from 'react-toastify';
+import { Container } from 'react-bootstrap'
+import { ToastContainer } from 'react-toastify'
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [emailError, setEmailError] = useState('')
+  const [passwordError, setPasswordError] = useState('')
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const token = useSelector((state) => state.user.token);
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const token = useSelector((state) => state.user.token)
 
   const onSubmitForm = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (email.length < 1) {
-      setEmailError('Email field is required');
+      setEmailError('Email field is required')
     }
 
     if (password.length < 1) {
-      setPasswordError('Password field is required');
-      return;
+      setPasswordError('Password field is required')
+      return
     }
 
-    const body = { username: email, password };
+    const body = { username: email, password }
 
-    dispatch(sellerLogin(body));
-  };
+    dispatch(sellerLogin(body))
+  }
 
   useEffect(() => {
     if (token) {
-      return navigate('/dashboard');
+      return navigate('/dashboard')
     }
-  }, [token]);
+  }, [token])
 
   return (
     <>
@@ -93,9 +93,9 @@ const Login = () => {
                   }`}
                   value={email}
                   onChange={(e) => {
-                    e.preventDefault();
-                    setEmailError('');
-                    setEmail(e.target.value);
+                    e.preventDefault()
+                    setEmailError('')
+                    setEmail(e.target.value)
                   }}
                 />
               </div>
@@ -122,9 +122,9 @@ const Login = () => {
                   }`}
                   value={password}
                   onChange={(e) => {
-                    e.preventDefault();
-                    setPasswordError();
-                    setPassword(e.target.value);
+                    e.preventDefault()
+                    setPasswordError()
+                    setPassword(e.target.value)
                   }}
                 />
               </div>
@@ -140,7 +140,7 @@ const Login = () => {
       </div>
       <ToastContainer />
     </>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

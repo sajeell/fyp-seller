@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import './DriverChart.css';
+import './DriverChart.css'
 
-import CanvasJSReact from '../../../static/assets/canvasjs.react';
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+import CanvasJSReact from '../../../static/assets/canvasjs.react'
+var CanvasJSChart = CanvasJSReact.CanvasJSChart
 
 class DriverChart extends Component {
   render() {
@@ -34,14 +34,14 @@ class DriverChart extends Component {
           ],
         },
       ],
-    };
+    }
 
     return (
       <div className='driver-chart-wrapper'>
         <CanvasJSChart options={options} />
       </div>
-    );
+    )
   }
 }
 
-export default DriverChart;
+export default DriverChart

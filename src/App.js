@@ -1,12 +1,12 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
+import { Route, Routes } from 'react-router-dom'
+import './App.css'
 
-import Dashboard from './components/dashboard/Dashboard';
-import Drawer from './components/dashboard/drawer/Drawer';
-import Intermediary from './components/intermediary/Intermediary';
-import Login from './components/login/Login';
-import Orders from './components/orders/Orders';
-import Products from './components/products/Products';
+import Dashboard from './components/dashboard/Dashboard'
+import Drawer from './components/dashboard/drawer/Drawer'
+import Intermediary from './components/intermediary/Intermediary'
+import Login from './components/login/Login'
+import Orders from './components/orders/Orders'
+import Products from './components/products/Products'
 
 function App() {
   return (
@@ -83,7 +83,7 @@ function App() {
         />
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

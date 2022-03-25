@@ -25,10 +25,10 @@ class AreaChart extends Component {
             { y: 49, label: 'F-15', color: '#8c9497' },
             { y: 9, label: 'G-10', color: '#848482' },
             { y: 5, label: 'G-11', color: '#7f7679' },
-            { y: 19, label: 'F-6', color: '#878f99' }
-          ]
-        }
-      ]
+            { y: 19, label: 'F-6', color: '#878f99' },
+          ],
+        },
+      ],
     }
 
     return (
