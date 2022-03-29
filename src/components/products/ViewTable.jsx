@@ -1,7 +1,31 @@
+import { useEffect } from 'react'
 import { Button, Row } from 'react-bootstrap'
 import './Products.css'
 
-const ViewTable = () => {
+const ViewTable = (props) => {
+  const month = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ]
+
+  const convertToNormalDate = (dateArg) => {
+    const date = new Date(dateArg)
+
+    return `${date.getDate()} ${month[date.getMonth()]},${date.getFullYear()}`
+  }
+  useEffect(() => {
+    console.log(props.data)
+  }, [props.data])
   return (
     <>
       <div className='search-wrapper'>
@@ -43,28 +67,37 @@ const ViewTable = () => {
                 <th>S. #</th>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Type</th>
-                <th>Added On</th>
-                <th>Sold</th>
+                <th>Category</th>
+                <th>Stock</th>
+                <th>Price</th>
+                <th>Created At</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>#1234567891010110</td>
-                <td>Acoustic Guitar</td>
-                <td>Antique</td>
-                <td>22 June, 2021</td>
-                <td>22</td>
-                <td>
-                  <Row>
-                    <Button variant='outline-info' style={{ borderRadius: 50 }}>
-                      View Details
-                    </Button>
-                  </Row>
-                </td>
-              </tr>
+              {props.data && props.data.length > 0
+                ? props.data.map((product, index) => (
+                    <tr key={index}>
+                      <td>{index + 1}</td>
+                      <td>{product._id}</td>
+                      <td>{product.title}</td>
+                      <td>{product.category}</td>
+                      <td>{product.stock}</td>
+                      <td>{product.price}</td>
+                      <td>{convertToNormalDate(product.createdAt)}</td>
+                      <td>
+                        <Row>
+                          <Button
+                            variant='outline-info'
+                            style={{ borderRadius: 50 }}
+                          >
+                            View Details
+                          </Button>
+                        </Row>
+                      </td>
+                    </tr>
+                  ))
+                : ''}
             </tbody>
           </table>
         </div>
