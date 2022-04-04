@@ -5,4 +5,5 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
   URL = 'https://barganttic.herokuapp.com/'
 }
 
+URL = 'https://barganttic.herokuapp.com/'
 export default URL

@@ -6,7 +6,10 @@ import Drawer from './components/dashboard/drawer/Drawer'
 import Intermediary from './components/intermediary/Intermediary'
 import Login from './components/login/Login'
 import Orders from './components/orders/Orders'
+import AddProduct from './components/products/AddProduct'
 import Products from './components/products/Products'
+
+import './components/reusable/Components.css'
 
 function App() {
   return (
@@ -52,6 +55,21 @@ function App() {
               </main>
               <main className='right-content'>
                 <Orders />
+              </main>
+            </>
+          }
+        />
+
+        <Route
+          exact
+          path='/add-product'
+          element={
+            <>
+              <main className='drawer'>
+                <Drawer products={true} />
+              </main>
+              <main className='right-content'>
+                <AddProduct />
               </main>
             </>
           }

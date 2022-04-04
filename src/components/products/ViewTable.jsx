@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Button, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import './Products.css'
 
 const ViewTable = (props) => {
@@ -23,9 +24,6 @@ const ViewTable = (props) => {
 
     return `${date.getDate()} ${month[date.getMonth()]},${date.getFullYear()}`
   }
-  useEffect(() => {
-    console.log(props.data)
-  }, [props.data])
   return (
     <>
       <div className='search-wrapper'>
@@ -57,9 +55,11 @@ const ViewTable = (props) => {
         <span>View</span>
       </div>
       <div className='view-table-wrapper'>
-        <div className='add'>
-          <span>+ add</span>
-        </div>
+        <Link to='/add-product'>
+          <div className='add'>
+            <span>+ add</span>
+          </div>
+        </Link>
         <div className='view-table'>
           <table>
             <thead>

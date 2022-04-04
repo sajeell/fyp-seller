@@ -183,3 +183,24 @@ table {
 .table > :not(:first-child) {
   border: none !important;
 }
+
+/* Add Product Form */
+.addproduct-form {
+  margin-top: 10px;
+  width: 60vw;
+}
+
+.form-row .input-group {
+  width: 350px;
+}
+
+.form-row textarea {
+  width: 350px;
+}
+
+.form-row .page-button {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 500px) {
+}
