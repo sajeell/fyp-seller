@@ -24,6 +24,10 @@ const ViewTable = (props) => {
 
     return `${date.getDate()} ${month[date.getMonth()]},${date.getFullYear()}`
   }
+
+  useEffect(() => {
+    console.log(props.data)
+  }, [props.data])
   return (
     <>
       <div className='search-wrapper'>
@@ -69,7 +73,6 @@ const ViewTable = (props) => {
                 <th>Name</th>
                 <th>Category</th>
                 <th>Stock</th>
-                <th>Price</th>
                 <th>Created At</th>
                 <th>Actions</th>
               </tr>
@@ -83,7 +86,6 @@ const ViewTable = (props) => {
                       <td>{product.title}</td>
                       <td>{product.category}</td>
                       <td>{product.stock}</td>
-                      <td>{product.price}</td>
                       <td>{convertToNormalDate(product.createdAt)}</td>
                       <td>
                         <Row>

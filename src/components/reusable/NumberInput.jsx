@@ -5,12 +5,19 @@ import './Components.css'
 const NumberInput = (props) => {
   return (
     <div className='number-input'>
+      {props.error && props.error.length > 0 ? (
+        <small style={{ color: '#dc3545', marginBottom: 5 }}>
+          {props.error}
+        </small>
+      ) : (
+        ''
+      )}
       <InputGroup className='mb-3'>
         {props.reverse === false ? <InputGroup.Text>$</InputGroup.Text> : ''}
         <FormControl
           placeholder='100'
           type='number'
-          min={0}
+          min={5}
           value={props.value}
           onChange={props.onChange}
         />

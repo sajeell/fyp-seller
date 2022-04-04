@@ -2,6 +2,7 @@ import ActionsType from './../utils/actions.type'
 
 const INITIAL_STATE = {
   products: [],
+  productID: null,
   error: {},
   response: {},
 }
@@ -12,6 +13,11 @@ const productReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         products: action.payload,
+      }
+    case ActionsType.SET_PRODUCT_ID:
+      return {
+        ...state,
+        productID: action.payload,
       }
     case ActionsType.API_ERROR:
       return {
