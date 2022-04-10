@@ -64,14 +64,14 @@ const AssignProduct = () => {
         <ToastContainer />
         <br />
         <Row className='form-row'>
-          <p className='form-label'>Stock</p>
+          <p className='form-label'>Commission</p>
           <NumberInput
             placeholder='Commission %'
             value={commission}
             error={commissionError}
             onChange={(e) => {
               setCommissionError('')
-              setCommission(e.target.value)
+              setCommission(parseInt(e.target.value))
             }}
           />
         </Row>
@@ -79,7 +79,7 @@ const AssignProduct = () => {
           <p className='form-label'>Assign Product</p>
           <select
             onChange={(e) => {
-              setProductID(parseInt(e.target.value))
+              setProductID(e.target.value)
             }}
           >
             <option disabled>Assign Product</option>
