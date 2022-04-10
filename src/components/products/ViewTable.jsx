@@ -30,31 +30,6 @@ const ViewTable = (props) => {
   }, [props.data])
   return (
     <>
-      <div className='search-wrapper'>
-        <div className='search-input'>
-          <input type='text' placeholder='ID' />
-        </div>
-        <div className='search-input'>
-          <input type='text' placeholder='Name' />
-        </div>
-        <div className='search-input'>
-          <select>
-            <option>Type</option>
-            <option value='Service' defaultChecked>
-              Service
-            </option>
-            <option value='Facility'>Antique</option>
-            <option value='Event'>Handmade</option>
-          </select>
-        </div>
-      </div>
-      <div style={{ display: 'flex' }}>
-        <div className='action-button'>Search</div>
-        &nbsp; &nbsp; &nbsp;
-        <div className='action-button'>Reset</div>
-      </div>
-      <br />
-      <br />
       <div className='products-heading'>
         <span>View</span>
       </div>

@@ -16,13 +16,9 @@ const Products = () => {
     dispatch(fetchProducts(token, sellerID))
   }, [token])
 
-  const fetchProductsAPI = () => {}
   return (
     <div className='products-wrapper'>
       <h1>Products</h1>
-      <div className='products-heading'>
-        <span>Search</span>
-      </div>
       <div className='table'>
         <ViewTable data={products} />
       </div>
