@@ -83,7 +83,7 @@ const AssignProduct = () => {
             }}
           >
             <option disabled>Assign Product</option>
-            {products.length > 0 ? (
+            {products && products.length > 0 ? (
               products.map((product, index) => (
                 <option key={index} value={product._id}>
                   {product.title}
